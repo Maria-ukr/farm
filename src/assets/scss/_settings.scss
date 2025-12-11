@@ -70,15 +70,22 @@ $global-font-size: 100%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
-  "primary": #1779ba,
-  "secondary": #767676,
-  "success": #3adb76,
-  "warning": #ffae00,
-  "alert": #cc4b37,
+  "primary": #09395f,
+  "secondary": #818181,
+  "success": #40af49,
+  "warning": #f75524,
+  "alert": #d33808,
 );
-$light-gray: #e6e6e6;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$light-gray: #eceaed;
+$medium-gray: #9b9b9b;
+$dark-gray: #818181;
+$blue: #09395f;
+$dark-blue: #052e4e;
+$green: #40af49;
+$dark-green: #288830;
+$orange: #f75524;
+$red: #d33808;
+
 $black: #0a0a0a;
 $white: #fefefe;
 $body-background: $white;
@@ -91,7 +98,7 @@ $global-padding: 1rem;
 $global-position: 1rem;
 $global-weight-normal: normal;
 $global-weight-bold: bold;
-$global-radius: 0;
+$global-radius: 5px;
 $global-menu-padding: 0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 $global-text-direction: ltr;
@@ -160,8 +167,8 @@ $header-styles: (
   medium: (
     'h1': ('font-size': 48),
     'h2': ('font-size': 40),
-    'h3': ('font-size': 31),
-    'h4': ('font-size': 25),
+    'h3': ('font-size': 33),
+    'h4': ('font-size': 30),
     'h5': ('font-size': 20),
     'h6': ('font-size': 16),
   ),
