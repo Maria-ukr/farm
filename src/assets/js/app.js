@@ -15,3 +15,21 @@ require('foundation-sites');
 
 
 $(document).foundation();
+
+
+const playButton = document.getElementById("play-pause");
+const video = document.getElementById("video");
+function togglePlay() {
+  if (video.paused) video.play();
+  else video.pause();
+}
+video.addEventListener("click", togglePlay);
+playButton.addEventListener("click", togglePlay);
+
+video.addEventListener("play", () => {
+  playButton.style.opacity = 0;
+});
+
+video.addEventListener("pause", () => {
+  playButton.style.opacity = 1;
+});

@@ -1,7 +1,7 @@
     
 
-<section class="hero-section" style="background-image: url('/assets/img/hero.png');">
-  <div class="hero-section__overflow"></div>
+<section class="hero" style="background-image: url('/assets/img/hero.png');">
+  <div class="hero__overflow"></div>
   <div class="grid-container">
     <div class="grid-x grid-margin-x align-middle hero-section-text">
       <div class="cell small-12 large-6 header__hero-left">
@@ -13,7 +13,7 @@
           <span>IMPROVING HEALTH.</span>
         </h1>
         <p>At nos hinc posthac, sitientis piros Afros. Petierunt uti sibi concilium totius Galliae in diem certam indicere. Ullamco laboris nisi ut aliquid ex ea commodi consequat.</p>
-        <a class="button primary" href="#">>Why choose the VES system »</a>
+        <a class="button hero__btn" href="#">Why choose the VES system »</a>
       </div>
     </div>
   </div>
@@ -21,19 +21,30 @@
   
 <section class="results-section">
   <div class="grid-container">
-    <div class="grid-x grid-margin-x align-middle">
+    <div class="grid-x align-center">
       
-      <div class="cell small-12 medium-6">
+      <div class="cell small-12 medium-5 align-self-middle results-section__left" style="background-image: url('/assets/img/bg-curves-card.svg');">
         <div class="results-card">
-          <h3>Proven Results &<br><strong>Service To Match.</strong></h3>
+          <h3>Proven Results
+            <span>Service To Match.</span>
+          </h3>
           <p>Cum ceteris in veneratione tui montes, nascetur mus. Praeterea iter est quasdam res quas ex communi.</p>
-          <a class="button">See what it can do</a>
+          <a class="button results-section__btn">See what it can do</a>
         </div>
       </div>
 
-      <div class="cell small-12 medium-6">
+      <div class="cell small-12 medium-5 results-section__right">
         <div class="results-video">
-          <!-- Відео -->
+          <video preload="auto"
+            playsinline
+            webkit-playsinline
+            muted
+            loop
+            id="video">
+            <source src="/assets/img/farm-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <button type="button" id="play-pause"></button>
         </div>
       </div>
 
@@ -41,34 +52,76 @@
   </div>
 </section>
 
-<section class="events-section">
+<section class="events-section" style="background-image: url('/assets/img/bg-curves-green.svg');">
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
 
       <div class="cell small-12 medium-6">
         <h3>Featured Events</h3>
-        <div class="featured-event-card">
-          <!-- Контент -->
+        <div class="featured-event-card grid-x medium-6">
+          <div class="cell medium-6 event-card-left">
+            <p class="event-card__date"><span>08</span>Nov. 2017</p>
+            <p class="event-card__time">8:00 am - 5:00 pm</p>
+            <h5>Event Title</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, voluptas, voluptatibus. Adipisci dicta esse expedita, hic ipsa iusto laboriosam repudiandae!</p>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="event-card__price">$45</p>
+            </div>
+            <div>
+              <i class="fa-solid fa-location-dot"></i>
+              <p>4120 Willow Greene Drive
+Montgomery, AL 36117</p>
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <img src="/assets/img/bayer-event.jpg" alt="event" />
+          </div>
         </div>
+        
       </div>
 
       <div class="cell small-12 medium-6">
         <h3>Future Events</h3>
-
-        <div class="event-item">
-          <!-- Анонс події -->
-        </div>
-        <div class="event-item">
-          <!-- Анонс події -->
-        </div>
-        <a class="button small">View All</a>
+        <ul class="events__list">
+          <li class="event__item">
+            <div class="event__item-img">
+              <img src="/assets/img/Logo_TV.png" alt="Logo_TV" />
+            </div>
+            <div class="event__text">
+              <h6>Event title 2</h6>
+              <p  class="event__time">November 23, 2017 @ 12:00 am</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolore esse, expedita maxime praesentium quibusdam repudiandae rerum soluta voluptate!</p>
+            </div>
+          </li>
+          <li class="event__item">
+            <div class="event__item-img">
+              <img src="/assets/img/Logo_TV.png" alt="Logo_TV" />
+            </div>
+            <div class="event__text">
+              <h6>Event title 2</h6>
+              <p  class="event__time">November 23, 2017 @ 12:00 am</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolore esse, expedita maxime praesentium quibusdam repudiandae rerum soluta voluptate!</p>
+            </div>
+          </li>
+          <li class="event__item">
+            <div class="event__item-img">
+              <img src="/assets/img/Logo_TV.png" alt="Logo_TV" />
+            </div>
+            <div class="event__text">
+              <h6>Event title 2</h6>
+              <p  class="event__time">November 23, 2017 @ 12:00 am</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolore esse, expedita maxime praesentium quibusdam repudiandae rerum soluta voluptate!</p>
+            </div>
+          </li>
+        </ul>
+        <a class="button small events__btn">View All</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<section class="industries-section">
+<section class="industries-section" style="background-image: url('/assets/img/bg-curves-blue.svg');">
   <div class="grid-container text-center">
     <h4>Industries</h4>
     <h3>We Serve</h3>
