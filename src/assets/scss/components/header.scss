@@ -1,0 +1,28 @@
+
+.header__logo-img {
+  display: inline-block;
+  padding-right: 10px;
+}
+.header__line {
+  width: 2px;
+  height: 40px;
+  background-color: red;
+  display: block;
+}
+
+.top-bar-right {
+  height: 100px;
+  align-items: flex-end;
+}
+
+.menu li {
+  padding: 10px;
+  color: red;
+}
+
+.menu-top {
+  background-color: rgb(225, 225, 225);
+  width: max-content;
+  margin-left: auto;
+  text-align: right;
+}
