@@ -5,8 +5,6 @@
 @import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @import 'foundation';
 @import 'motion-ui';
-@import 'components/header.scss';
-@import 'components/main.scss';
 
 // Global styles
 @include foundation-global-styles;
@@ -91,3 +89,8 @@
   font-weight: 800;
   font-style: normal;
 }
+
+@import 'common.scss';
+@import 'components/main.scss';
+@import 'components/header.scss';
+@import 'components/footer.scss';
