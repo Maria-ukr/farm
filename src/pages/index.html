@@ -56,59 +56,66 @@
   <div class="grid-container">
     <div class="grid-x grid-margin-x">
 
-      <div class="cell small-12 medium-6">
+      <div class="cell medium-12 large-6">
         <h3>Featured Events</h3>
-        <div class="featured-event-card grid-x medium-6">
-          <div class="cell medium-6 event-card-left">
-            <p class="event-card__date"><span>08</span>Nov. 2017</p>
-            <p class="event-card__time">8:00 am - 5:00 pm</p>
-            <h5>Event Title</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, voluptas, voluptatibus. Adipisci dicta esse expedita, hic ipsa iusto laboriosam repudiandae!</p>
-            <div>
-              <i class="fa-solid fa-location-dot"></i>
-              <p class="event-card__price">$45</p>
+        <div class="grid-x medium-12 large-6">
+
+          <div class="featured-event-card grid-x medium-12">
+            <div class="medium-12 large-6 event-card-left">
+              <p class="event-card__date"><span>08</span>Nov. 2017</p>
+              <p class="event-card__time">8:00 am - 5:00 pm</p>
+              <h5>Event Title</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, voluptas, voluptatibus. Adipisci dicta esse expedita, hic ipsa iusto laboriosam repudiandae!</p>
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="event-card__price">$45</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p class="event-card__addr">4120 Willow Greene Drive Montgomery, AL 36117</p>
+              </div>
             </div>
-            <div>
-              <i class="fa-solid fa-location-dot"></i>
-              <p>4120 Willow Greene Drive
-Montgomery, AL 36117</p>
+            <div class="cell medium-12 large-6">
+              <img src="/assets/img/bayer-event.jpg" alt="event" />
             </div>
           </div>
-          <div class="cell medium-6">
-            <img src="/assets/img/bayer-event.jpg" alt="event" />
+          <div class="grid-x medium-12 large-6 slider__btns">
+            <button class="slider__btn-prev">Previous</button>
+            <span></span>
+            <button class="slider__btn-next">Next</button>
           </div>
         </div>
-        
+
       </div>
 
-      <div class="cell small-12 medium-6">
+      <div class="cell medium-12 large-6">
         <h3>Future Events</h3>
         <ul class="events__list">
-          <li class="event__item">
-            <div class="event__item-img">
+          <li class="grid-x event__item">
+            <div class="cell large-4 event__item-img">
               <img src="/assets/img/Logo_TV.png" alt="Logo_TV" />
             </div>
-            <div class="event__text">
+            <div class="cell large-8 event__text">
               <h6>Event title 2</h6>
               <p  class="event__time">November 23, 2017 @ 12:00 am</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolore esse, expedita maxime praesentium quibusdam repudiandae rerum soluta voluptate!</p>
             </div>
           </li>
-          <li class="event__item">
-            <div class="event__item-img">
+          <li class="grid-x event__item">
+            <div class="cell medium-4 event__item-img">
               <img src="/assets/img/Logo_TV.png" alt="Logo_TV" />
             </div>
-            <div class="event__text">
+            <div class="cell medium-8 event__text">
               <h6>Event title 2</h6>
               <p  class="event__time">November 23, 2017 @ 12:00 am</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolore esse, expedita maxime praesentium quibusdam repudiandae rerum soluta voluptate!</p>
             </div>
           </li>
-          <li class="event__item">
-            <div class="event__item-img">
+          <li class="grid-x event__item">
+            <div class="cell medium-4 event__item-img">
               <img src="/assets/img/Logo_TV.png" alt="Logo_TV" />
             </div>
-            <div class="event__text">
+            <div class="cell medium-8 event__text">
               <h6>Event title 2</h6>
               <p  class="event__time">November 23, 2017 @ 12:00 am</p>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci distinctio dolore esse, expedita maxime praesentium quibusdam repudiandae rerum soluta voluptate!</p>
@@ -160,16 +167,30 @@ Montgomery, AL 36117</p>
 </section>
 
 <section class="dealer-section">
-  <div class="grid-x">
-
-    <div class="cell small-12 medium-6 dealer-slide">
-      <img src="/assets/img/pen.png" alt="pen" />
+  <div class="grid-x grid-margin-x dealer__list">
+    <div class="dealer-slider__btns">
+      <button class="dealer-slider__btn dealer-slider__btn-prev">Previous</button>
+      <span></span>
+      <button class="dealer-slider__btn dealer-slider__btn-next">Next</button>
     </div>
 
-    <div class="cell small-12 medium-6 dealer-slide">
-      <img src="/assets/img/agriculture-industry.png" alt="fan" />
+    <div class="cell medium-12 large-6 grid-x align-middle dealer dealer__left" style="background-image: url('/assets/img/pen.png');">
+      <div class="dealer-content medium-10 large-8">
+        <h4>Become An</h4>
+        <h3>Elite VES Dealer.</h3>
+        <p>Cum ceteris in veneratione tui montes, nascetur mus. Praeterea iter est quasdam res quas ex communi.</p>
+        <a class="button dealer__btn" href="#">SEE HOW IT WORKS »</a>
+      </div>
     </div>
 
+    <div class="cell medium-12 large-6 grid-x align-middle dealer dealer__right" style="background-image: url('/assets/img/agriculture-industry.png');">
+      <div class="dealer-content medium-10 large-8">
+        <h4>Are You A Farmer &</h4>
+        <h3>INTERESTED IN VES?</h3>
+        <p>Cum ceteris in veneratione tui montes, nascetur mus. Praeterea iter est quasdam res quas ex communi.</p>
+        <a class="button dealer__btn" href="#"> WHAT VES CAN DO FOR YOU »</a>
+      </div>
+    </div>
   </div>
 </section>
 
