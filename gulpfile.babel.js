@@ -36,10 +36,16 @@ const { PORT, UNCSS_OPTIONS, PATHS } = loadConfig();
 
 console.log(UNCSS_OPTIONS);
 
+
+function copyWebfonts() {
+  return gulp.src('node_modules/@fortawesome/fontawesome-free/webfonts/*')
+    .pipe(gulp.dest(PATHS.dist + '/assets/webfonts'));
+}
+
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, javascript, images, copy), sassBuild, styleGuide)
+  gulp.series(clean, gulp.parallel(pages, javascript, images, copy, copyWebfonts), sassBuild, styleGuide)
 );
 
 // Build the site, run the server, and watch for file changes

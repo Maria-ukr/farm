@@ -34,3 +34,7 @@ span.vertical-line {
   display: block;
   background-color: $white;
 }
+p, input, button {
+  margin: 0;
+  padding: 0;
+}

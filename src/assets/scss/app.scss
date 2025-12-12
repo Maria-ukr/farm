@@ -2,7 +2,6 @@
 
 @import 'reset';
 @import 'settings';
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css";
 @import 'foundation';
 @import 'motion-ui';
 
@@ -68,7 +67,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../assets/fonts/Lato-Regular.ttf') format('ttf'),
+  src: url('../assets/fonts/Lato-Regular.ttf') format('truetype'),
        url('../assets/fonts/Lato-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
@@ -76,7 +75,7 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../assets/fonts/Lato-Bold.ttf') format('ttf'),
+  src: url('../assets/fonts/Lato-Bold.ttf') format('truetype'),
        url('../assets/fonts/Lato-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
@@ -84,11 +83,16 @@
 
 @font-face {
   font-family: 'Lato';
-  src: url('../assets/fonts/Lato-Black.ttf') format('ttf'),
+  src: url('../assets/fonts/Lato-Black.ttf') format('truetype'),
        url('../assets/fonts/Lato-Black.woff') format('woff');
   font-weight: 800;
   font-style: normal;
 }
+
+$fa-font-path: "../webfonts";
+@import 'node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/solid';
+@import 'node_modules/@fortawesome/fontawesome-free/scss/brands';
 
 @import 'common.scss';
 @import 'components/main.scss';
