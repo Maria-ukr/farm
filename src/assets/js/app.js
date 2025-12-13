@@ -3,7 +3,7 @@ import 'what-input';
 import $ from 'jquery';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
-import 'swiper/css';
+// import 'swiper/css';
 
 // Foundation JS relies on a global variable. In ES6, all imports are hoisted
 // to the top of the file so if we used `import` to import Foundation,
