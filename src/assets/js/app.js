@@ -1,7 +1,9 @@
 
 import 'what-input';
 import $ from 'jquery';
-import 'slick-carousel';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
 
 // Foundation JS relies on a global variable. In ES6, all imports are hoisted
 // to the top of the file so if we used `import` to import Foundation,
@@ -78,23 +80,45 @@ window.addEventListener('scroll', () => {
 });
 
 
+const sliderEvents = document.querySelector('[data-slider-events]');
+if(sliderEvents) {
+  const swiper = new Swiper(sliderEvents, {
+    grabCursor: true,
+    loop: true,
+    modules: [Navigation],
+    infinite: true,
+    pauseOnHover: false,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".slider__btn-next",
+      prevEl: ".slider__btn-prev",
+    },
+  })
+}
 
-// $(document).ready(function () {
-//   const $slider = $('[data-slider-events]');
-//     $('[data-slider-events]').slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     infinite: true,
-//     dots: false,
-//     arrows: false,
-//     adaptiveHeight: true,
-//     cssEase: 'ease',
-//   });
-//   $('.slider__btn-prev').on('click', function () {
-//     $slider.slick('slickPrev');
-//   });
-
-//   $('.slider__btn-next').on('click', function () {
-//     $slider.slick('slickNext');
-//   });
-// });
+const sliderDillers = document.querySelector('[data-slider-dillers]');
+if(sliderDillers) {
+  const swiper = new Swiper(sliderDillers, {
+    grabCursor: true,
+    spaceBetween: 16,
+    loop: true,
+    modules: [Navigation],
+    infinite: true,
+    pauseOnHover: false,
+    navigation: {
+      nextEl: ".dealer-slider__btn-next",
+      prevEl: ".dealer-slider__btn-prev",
+    },
+    breakpoints: {
+      991: {
+        slidesPerView: 2,
+      },
+      767: {
+        slidesPerView: 1,
+      },
+      320: {
+        slidesPerView: 1,
+      }
+    }
+  })
+}

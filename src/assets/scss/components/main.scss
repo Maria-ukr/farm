@@ -202,8 +202,11 @@
 
   .featured-event-card {
     background-color: $white;
-    color: #333;
+    flex-wrap: nowrap;
     color: $medium-gray;
+    @media only screen and (max-width: 640px) {
+      flex-direction: column;
+    }
     & img {
       overflow: hidden;
       width: 100%;
@@ -466,15 +469,19 @@
 .dealer-section {
   position: relative;
   z-index: 1;
-  margin-top: -7rem;
+  margin-top: -8rem;
   position: relative;
   &__bg {
     z-index: 6;
     position: relative;
-    margin-top: -6rem;
+    margin-top: -9rem;
     object-fit: cover;
     object-position: bottom;
     border-radius: $global-radius;
+  }
+  .slider-dillers {
+    position: relative;
+    width: 100%;
   }
   .dealer__list {
     position: relative;
@@ -487,6 +494,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 10;
+      @media only screen and (max-width: 600px) {
+        margin: 0 1rem;
+      }
       .dealer-slider__btn {
         border-radius: 50%;
         background-color: $white;
@@ -527,6 +538,7 @@
         }
       }
       .dealer__btn {
+
         display: flex;
         align-items: center;
         margin: 20px auto 0;
@@ -576,40 +588,3 @@
     }
   }
 }
-
-/* Fix Slick + Foundation grid */
-// [data-slider-events] {
-//   // width: 100%;
-// }
-
-// .slick-track {
-//   display: flex !important;
-// }
-
-// .slick-slide {
-//   display: flex !important;
-//   height: auto !important;
-// }
-
-// .slick-slide > div {
-//   width: 100%;
-// }
-// .featured-event-card img {
-//   width: 100%;
-//   height: auto; // ⬅️ КЛЮЧ
-//   display: block;
-//   object-fit: cover;
-// }
-// .featured-event-card {
-//   display: flex;
-
-//   .cell:last-child {
-//     min-height: 100%;
-//     display: flex;
-//   }
-
-//   .cell:last-child img {
-//     flex: 1;
-//     object-fit: cover;
-//   }
-// }
