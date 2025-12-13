@@ -1,5 +1,7 @@
-import $ from 'jquery';
+
 import 'what-input';
+import $ from 'jquery';
+import 'slick-carousel';
 
 // Foundation JS relies on a global variable. In ES6, all imports are hoisted
 // to the top of the file so if we used `import` to import Foundation,
@@ -74,3 +76,25 @@ window.addEventListener('scroll', () => {
     scrolledPastScreen || scrolledEnough || isScreenForMobileMenu
   );
 });
+
+
+
+// $(document).ready(function () {
+//   const $slider = $('[data-slider-events]');
+//     $('[data-slider-events]').slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     infinite: true,
+//     dots: false,
+//     arrows: false,
+//     adaptiveHeight: true,
+//     cssEase: 'ease',
+//   });
+//   $('.slider__btn-prev').on('click', function () {
+//     $slider.slick('slickPrev');
+//   });
+
+//   $('.slider__btn-next').on('click', function () {
+//     $slider.slick('slickNext');
+//   });
+// });

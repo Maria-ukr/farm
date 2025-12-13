@@ -577,3 +577,39 @@
   }
 }
 
+/* Fix Slick + Foundation grid */
+// [data-slider-events] {
+//   // width: 100%;
+// }
+
+// .slick-track {
+//   display: flex !important;
+// }
+
+// .slick-slide {
+//   display: flex !important;
+//   height: auto !important;
+// }
+
+// .slick-slide > div {
+//   width: 100%;
+// }
+// .featured-event-card img {
+//   width: 100%;
+//   height: auto; // ⬅️ КЛЮЧ
+//   display: block;
+//   object-fit: cover;
+// }
+// .featured-event-card {
+//   display: flex;
+
+//   .cell:last-child {
+//     min-height: 100%;
+//     display: flex;
+//   }
+
+//   .cell:last-child img {
+//     flex: 1;
+//     object-fit: cover;
+//   }
+// }
