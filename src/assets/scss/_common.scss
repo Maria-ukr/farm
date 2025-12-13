@@ -12,6 +12,7 @@ body {
   color: $black;
   font-size: 16px;
   letter-spacing: 0.02em;
+  padding-top: 100px;
   &::selection {
     background-color: $dark-green;
     color: $white;
@@ -37,4 +38,20 @@ span.vertical-line {
 p, input, button {
   margin: 0;
   padding: 0;
+}
+
+.main-cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.no-scroll{
+  overflow-y: hidden!important;
+  touch-action: none;
 }

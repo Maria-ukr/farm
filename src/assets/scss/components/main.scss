@@ -33,6 +33,8 @@
     line-height: 1.2rem;
   }
   .hero__btn {
+    display: flex;
+    align-items: center;
     margin: 25px auto 0;
     color: $white;
     background-color: $orange;
@@ -40,6 +42,10 @@
     padding: 0.8rem 2rem;
     text-transform: uppercase;
     border: 4px solid $red;
+    i {
+      font-size: 9px;
+      margin-left: 3px;
+    }
     &:hover {
       background-color: $orange;
       border: 4px solid $red;
@@ -81,7 +87,9 @@
       line-height: 1.2rem;
       margin-bottom: 25px;
     }
-    .results-section-btn {
+    .results-section__btn {
+      display: flex;
+      align-items: center;
       margin: 0;
       color: $white;
       background-color: $blue;
@@ -89,6 +97,10 @@
       padding: 0.8rem 2rem;
       text-transform: uppercase;
       border: 4px solid $dark-blue;
+      i {
+        font-size: 9px;
+        margin-left: 3px;
+      }
       &:hover {
         background-color: $dark-blue;
         border: 4px solid $blue;
@@ -169,7 +181,7 @@
   }
 
   p {
-    line-height: 1.35;
+    line-height: 1.05;
     letter-spacing: 0.02em;
     color: $dark-gray;
     padding: 0;
@@ -213,18 +225,29 @@
         color: $blue;
       }
       .event-card__price {
+        align-items: center;
         margin-top: 1.3rem;
-        font-weight: 700;
-        font-size: 30px;
         color: $blue;
+        p {
+          font-size: 30px;
+          font-weight: 700;
+          color: $blue;
+          padding-left: 0.5rem;
+        }
+        i {
+          font-size: 30px;
+          transform: rotate(-45deg);
+          color: $blue;
+        }
       }
       .event-card__addr {
+        margin-top: 1.3rem;
         color: $blue;
         display: flex;
         align-items: center;
 
         p {
-          margin-left: 0.5rem;
+          padding-left: 0.5rem;
           color: $blue;
         }
       }
@@ -290,6 +313,8 @@
       }
     }
     &__btn {
+      display: flex;
+      align-items: center;
       margin-top: 1rem;
       color: $white;
       background-color: $blue;
@@ -297,6 +322,10 @@
       padding: 0.8rem 2.7rem;
       text-transform: uppercase;
       border: 4px solid $dark-blue;
+      i {
+        font-size: 9px;
+        margin-left: 3px;
+      }
       @media only screen and (max-width: 500px) {
         display: flex;
         margin: 1rem auto;
@@ -308,14 +337,19 @@
     }
   }
   .slider__btns {
-    margin: 3rem 0;
-    font-size: 25px;
-    gap: 2rem;
+    margin: 2rem 0;
+    font-size: 20px;
+    gap: 1.5rem;
     flex-wrap: nowrap;
     button {
       color: $white;
       text-transform: uppercase;
       cursor: pointer;
+      transition: all 0.3s ease;
+      text-wrap: nowrap;
+      &:hover {
+        color: $blue-30;
+      }
     }
   }
 }
@@ -366,7 +400,7 @@
         &:after {
           content: '';
           position: absolute;
-          background-color: #245073;
+          background-color: $blue-30;
           width: 200px;
           height: 200px;
           top: auto;
@@ -446,6 +480,13 @@
         width: 50px;
         height: 50px;
         cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: $dark-blue;
+          i {
+            color: $white;
+          }
+        }
       }
     }
   }
@@ -473,6 +514,8 @@
         }
       }
       .dealer__btn {
+        display: flex;
+        align-items: center;
         margin: 20px auto 0;
         color: $white;
         background-color: $green;
@@ -480,6 +523,10 @@
         padding: 0.8rem 2rem;
         text-transform: uppercase;
         border: 4px solid $dark-green;
+        i {
+          font-size: 9px;
+          margin-left: 3px;
+        }
         &:hover {
           background-color: $dark-green;
           border: 4px solid $green;
@@ -495,6 +542,8 @@
         }
       }
       .dealer__btn {
+        display: flex;
+        align-items: center;
         margin: 20px auto 0;
         color: $white;
         background-color: $blue;
@@ -502,6 +551,10 @@
         padding: 0.8rem 2rem;
         text-transform: uppercase;
         border: 4px solid $dark-blue;
+        i {
+          font-size: 9px;
+          margin-left: 3px;
+        }
         &:hover {
           background-color: $dark-blue;
           border: 4px solid $blue;

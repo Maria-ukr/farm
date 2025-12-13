@@ -33,3 +33,17 @@ video.addEventListener("play", () => {
 video.addEventListener("pause", () => {
   playButton.style.opacity = 1;
 });
+
+
+const html = document.documentElement;
+const hamburgerMenuBtn = document.querySelector('[data-hamburger]');
+const iconMenu = document.querySelector('.header__hamburger-icon');
+const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+if (mobileMenu && hamburgerMenuBtn && iconMenu) {
+  hamburgerMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('is-open');
+    iconMenu.classList.toggle('close');
+    document.documentElement.classList.toggle('no-scroll');
+  });
+}

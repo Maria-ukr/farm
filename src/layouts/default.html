@@ -1,5 +1,3 @@
-{{!-- This is the base layout for your project, and will be used on every page unless specified. --}}
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -15,16 +13,16 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   </head>
 <body>
+  <div class="main-cover" style="background-image: url('/assets/img/curves_hero.svg');"></div>
+  {{> mob-menu}}
 
-{{> header}}
+  {{> header}}
 
-{{> body}}
+  {{> body}}
 
-{{> footer}}
-
-<script src="{{root}}assets/js/app.js"></script>
+  {{> footer}}
+  <script src="{{root}}assets/js/app.js"></script>
 </body>
 </html>
