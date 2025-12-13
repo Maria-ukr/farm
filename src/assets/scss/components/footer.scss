@@ -77,6 +77,12 @@
     .contact__item {
       align-items: center;
       flex-wrap: nowrap;
+      transition: all 0.3s ease;
+      &:hover {
+        a {
+          color: $light-gray;
+        }
+      }
     }
   }
   &-bottom {
@@ -85,6 +91,17 @@
     flex-wrap: nowrap;
     justify-content: center;
     background-color: $dark-blue;
+  }
+  .social__item {
+    .icon__circle {
+      transition: all 0.3s ease;
+      &:hover {
+        background-color: $light-gray;
+        i {
+          color: #245073;
+        }
+      }
+    }
   }
 }
 
