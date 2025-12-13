@@ -35,10 +35,16 @@ video.addEventListener("pause", () => {
 });
 
 
-const html = document.documentElement;
+const header = document.querySelector('header');
 const hamburgerMenuBtn = document.querySelector('[data-hamburger]');
 const iconMenu = document.querySelector('.header__hamburger-icon');
 const mobileMenu = document.querySelector('[data-mobile-menu]');
+
+let isScreenForMobileMenu = window.innerWidth < 1000;
+
+window.addEventListener('resize', () => {
+  isScreenForMobileMenu = window.innerWidth < 1000;
+});
 
 if (mobileMenu && hamburgerMenuBtn && iconMenu) {
   hamburgerMenuBtn.addEventListener('click', () => {
@@ -47,3 +53,24 @@ if (mobileMenu && hamburgerMenuBtn && iconMenu) {
     document.documentElement.classList.toggle('no-scroll');
   });
 }
+
+const setHeaderStyle = (visible) => {
+  if (!header) return;
+
+  if (visible) {
+    header.style.backgroundColor = '#ffffffe8';
+    header.style.backdropFilter = 'blur(10px)';
+  } else {
+    header.style.backgroundColor = 'transparent';
+    header.style.backdropFilter = 'none';
+  }
+};
+
+window.addEventListener('scroll', () => {
+  const scrolledPastScreen = window.scrollY > window.innerHeight;
+  const scrolledEnough = window.scrollY > 70;
+
+  setHeaderStyle(
+    scrolledPastScreen || scrolledEnough || isScreenForMobileMenu
+  );
+});
