@@ -42,10 +42,16 @@ function copyWebfonts() {
     .pipe(gulp.dest(PATHS.dist + '/assets/webfonts'));
 }
 
+function copyFontAwesomeCss() {
+  return gulp
+    .src('node_modules/@fortawesome/fontawesome-free/css/all.min.css')
+    .pipe(gulp.dest(PATHS.dist + '/assets'));
+}
+
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
-  gulp.series(clean, gulp.parallel(pages, javascript, images, copy, copyWebfonts), sassBuild, styleGuide)
+  gulp.series(clean, gulp.parallel(pages, javascript, images, copy, copyWebfonts, copyFontAwesomeCss), sassBuild, styleGuide)
 );
 
 // Build the site, run the server, and watch for file changes
