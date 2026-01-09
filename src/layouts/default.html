@@ -15,14 +15,20 @@
     />
   </head>
 <body>
-  <div class="main-cover" style="background-image: url('/assets/img/curves_hero.svg');"></div>
-  {{> mob-menu}}
+  <div class="main-cover" style="background-image: url('/assets/img/hero_curves.png');"></div>
 
-  {{> header}}
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas position-right mobile-menu" id="offCanvas" data-off-canvas data-transition="overlap">
+      {{> mob-menu}}
+    </div>
+    <div class="off-canvas-content body-wrapper" data-off-canvas-content>
+      {{> header}}
 
-  {{> body}}
+      {{> body}}
 
-  {{> footer}}
+      {{> footer}}
+    </div>
+  </div>
   <script src="{{root}}assets/js/app.js"></script>
 </body>
 </html>
