@@ -1,7 +1,6 @@
 @charset 'utf-8';
 
 @import 'reset';
-@import 'settings';
 @import 'foundation';
 @import 'motion-ui';
 
@@ -12,8 +11,8 @@
 
 // Grids (choose one)
 @include foundation-xy-grid-classes;
-// @include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-grid;
+@include foundation-flex-grid;
 
 // Generic components
 @include foundation-button;
@@ -96,7 +95,9 @@ $fa-font-path: "../webfonts";
 
 @import "node_modules/swiper/swiper";
 
+@import 'settings';
 @import 'common.scss';
 @import 'components/main.scss';
 @import 'components/header.scss';
 @import 'components/footer.scss';
+@import 'components/contacts.scss';

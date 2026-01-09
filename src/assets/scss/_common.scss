@@ -45,17 +45,39 @@ p, input, button {
 }
 
 .main-cover {
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center top;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 90%;
   height: 100vh;
   position: absolute;
   inset: 0;
   z-index: 3;
+  margin-inline: auto;
+  @media only screen and (max-width: 1200px) {
+    width: 100%;
+  }
 }
 
 .no-scroll{
   overflow-y: hidden!important;
   touch-action: none;
+}
+
+.body-wrapper {
+  overflow-x: hidden !important;
+  background-color: $white;
+  color: $black;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+  padding-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  height: 100%;
 }

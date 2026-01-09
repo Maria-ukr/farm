@@ -23,26 +23,28 @@ $(document).foundation();
 
 const playButton = document.getElementById("play-pause");
 const video = document.getElementById("video");
-function togglePlay() {
-  if (video.paused) video.play();
-  else video.pause();
+if(video && playButton) {
+  function togglePlay() {
+    if (video.paused) video.play();
+    else video.pause();
+  }
+  video.addEventListener("click", togglePlay);
+  playButton.addEventListener("click", togglePlay);
+
+  video.addEventListener("play", () => {
+    playButton.style.opacity = 0;
+  });
+
+  video.addEventListener("pause", () => {
+    playButton.style.opacity = 1;
+  });
 }
-video.addEventListener("click", togglePlay);
-playButton.addEventListener("click", togglePlay);
-
-video.addEventListener("play", () => {
-  playButton.style.opacity = 0;
-});
-
-video.addEventListener("pause", () => {
-  playButton.style.opacity = 1;
-});
 
 
 const header = document.querySelector('header');
 const hamburgerMenuBtn = document.querySelector('[data-hamburger]');
 const iconMenu = document.querySelector('.header__hamburger-icon');
-const mobileMenu = document.querySelector('[data-mobile-menu]');
+const mobileMenu = document.querySelector('mobile-menu');
 
 let isScreenForMobileMenu = window.innerWidth < 1000;
 

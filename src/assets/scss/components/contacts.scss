@@ -1,0 +1,82 @@
+
+.page-contacts {
+  .page-title {
+    font-size: 1.3rem;
+    color: $blue-30;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  .contacts-wrap {
+    background-color: #2888301f;
+    border-radius: $global-radius;
+    position: relative;
+    z-index: 5;
+  }
+  .contact-blocks {
+    li {
+      background-color: $white;
+      border-radius: $global-radius;
+    }
+    a, &__address {
+      color: $dark-gray;
+      font-weight: 700;
+      transition: color 0.3s linear;
+    }
+    a:hover {
+      color: $blue;
+    }
+    &__title {
+      font-weight: 700;
+    }
+  }
+  .contact-form {
+    .input-wrap {
+      position: relative;
+      margin-bottom: 1.3rem;
+      input {
+        display: block;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $medium-gray;
+        box-shadow: none;
+        padding: 0.8rem 0;
+        outline: none;
+      }
+      textarea {
+        display: block;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid $medium-gray;
+        box-shadow: none;
+        padding: 0.8rem 0;
+        outline: none;
+      }
+      label {
+        position: absolute;
+        color: $dark-gray;
+        top: 10px;
+        bottom: 0;
+        right: auto;
+        left: 0;
+        line-height: 1rem;
+        pointer-events: none;
+        transition: 0.3s ease;
+      }
+      &:focus-within label,
+      input:valid + label {
+        top: -7px;
+        font-size: 0.65rem;
+      }
+    }
+    button {
+      color: $white;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      transition: all 0.3s linear;
+      &:hover {
+        background-color: $dark-green;
+      }
+    }
+  }
+}
