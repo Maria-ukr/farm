@@ -17,6 +17,23 @@
     li {
       background-color: $white;
       border-radius: $global-radius;
+      flex-wrap: nowrap;
+    }
+    .contact-icon {
+      background-color: $green;
+      opacity: 0.7;
+      border-radius: $global-radius;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1rem;
+      padding-inline: 1rem;
+    }
+    i {
+      display: block;
+      font-size: 1.3rem;
+      height: auto;
+      color: white;
     }
     a, &__address {
       color: $dark-gray;
